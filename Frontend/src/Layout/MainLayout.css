@@ -1,0 +1,22 @@
+.main_layout {
+    display: flex;
+}
+.m_sidebar{
+    background-color: var(--fadedblue);
+    width:15%;
+    border-right: 1px solid var(--bordercolor);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 22px 16px 18px;
+    position: sticky;
+    top: 0;
+}
+.main_content{
+    width: 85%;
+}
+.main_content .content{
+    padding: 30px;
+}

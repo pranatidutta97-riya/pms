@@ -1,0 +1,9 @@
+.project_grid{
+    background: var(--fadedblue);
+    padding: 25px;
+    border-bottom: 2px solid var(--lightblue);
+    border-radius: 10px;
+}
+.viewtask_btn{
+    font-size: var(--font-16);
+}

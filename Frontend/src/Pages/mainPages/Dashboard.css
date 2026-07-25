@@ -1,0 +1,23 @@
+.charts_container,.cards_container,.works_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.task_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 15px;
+  border-bottom: 1px solid var(--linecolor);
+  margin:0;
+}
+.project_item:not(:last-child){
+    border-bottom: 1px solid var(--bordercolor);
+}
+.task_wrap:last-child{border-bottom: 0;}
+.task_wrap h6{
+    font-size: var(--font-16);
+}
+.task_wrap p{font-size: var(--font-14);}

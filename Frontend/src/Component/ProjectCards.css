@@ -1,0 +1,19 @@
+.project_card {
+  background: var(--blurbg);
+  padding: 15px;
+  border-left: 4px solid var(--lightblue);
+  border-radius: 10px;
+}
+.project_card .desc{
+    font-size: var(--font-14);
+}
+.member:not(:last-child){
+    border-right: 1px solid var(--bordercolor) ;
+}
+.task_btn{
+    background: var(--lightblue);
+    color: var(--white);
+    font-size: var(--font-16);
+    box-shadow: 0 1px 2px var(--btnshadow);
+    padding: 4px 10px;
+}

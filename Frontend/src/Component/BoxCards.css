@@ -1,0 +1,35 @@
+.card_left_info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card_title {
+    color: var(--txtcolor);
+    font-weight: 500;
+}
+
+.card_value {
+    color: var(--white);
+    font-weight: 700;
+    margin: 0;
+}
+
+.card_subtext {
+    font-size: var(--font-14);
+    color: var(--txtmuted);;
+    font-weight: 400;
+}
+
+/* আইকন বক্সের স্টাইল */
+.card_right_icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    position: absolute;
+    right: 20px;
+}
