@@ -21,7 +21,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-        const response = await fetch('http://mayurpankhi:9005/api/auth/register', {
+        const response = await fetch('https://pms-j4aq.onrender.com/api/auth/register', {
             method: 'POST',
             mode: 'cors',
             headers: {

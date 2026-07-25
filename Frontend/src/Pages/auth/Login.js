@@ -23,7 +23,7 @@ const Login = () => {
     const handleLogin = async(e) => {
         if (e) e.preventDefault();
         try{
-            const res = await fetch('http://mayurpankhi:9005/api/auth/login', {
+            const res = await fetch('https://pms-j4aq.onrender.com/api/auth/login', {
                 method: 'POST',
                 mode: 'cors',
                 headers: {
@@ -52,7 +52,7 @@ const Login = () => {
         
     }
     const handleGoogleSuccess = async (credentialResponse) => {
-        const response = await fetch('http://mayurpankhi:9005/api/auth/google-login', {
+        const response = await fetch('https://pms-j4aq.onrender.com/api/auth/google-login', {
             method: 'POST',
             mode: 'cors',
             headers: {

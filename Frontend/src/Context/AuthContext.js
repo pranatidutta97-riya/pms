@@ -25,7 +25,7 @@ const AuthProvider = ({ children }) => {
         if(!currentUserId) {
             return;
         }
-        const newsocket = io('http://mayurpankhi:9005');
+        const newsocket = io('https://pms-j4aq.onrender.com/');
         setsocket(newsocket);
 
         newsocket.on('connect', () => {
