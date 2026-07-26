@@ -25,7 +25,13 @@ const AuthProvider = ({ children }) => {
         if(!currentUserId) {
             return;
         }
-        const newsocket = io('https://pms-j4aq.onrender.com/');
+        const newsocket = io('https://pms-j4aq.onrender.com/', {
+            transports: ['websocket', 'polling'],
+            reconnection: true,                 
+            reconnectionAttempts: 5,            
+            reconnectionDelay: 1000,
+            withCredentials: true
+        });
         setsocket(newsocket);
 
         newsocket.on('connect', () => {

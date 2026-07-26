@@ -34,10 +34,12 @@ const Chatbot = () => {
 
     useEffect(() => {
         const targetId = selectedUser?._id || selectedUser?.id;
+        if (!targetId) return;
+        const hasUnread = unreadUsers?.includes(targetId);
         const hasNewMessageFromSelected = globalMessages.some(
             msg => msg.sender_id === targetId && unreadUsers.includes(targetId)
         );
-        if (hasNewMessageFromSelected) {
+        if (hasUnread && hasNewMessageFromSelected) {
             setUnreadUsers(prev => prev.filter(id => id !== targetId));
         }
     },[globalMessages, selectedUser, unreadUsers, setUnreadUsers])
@@ -170,12 +172,12 @@ const Chatbot = () => {
                                     </div>
                                     <div className="chat_list_item_detail">
                                         <h6 className="mb-0">{selectedName}</h6>
-                                        {onlineUsers.includes(selectedUser?._id || selectedUser?.id) ? <span className="online-badge">Online</span> : <span className="offline-badge">Offline</span>}
+                                        {onlineUsers?.includes(selectedUser?._id || selectedUser?.id) ? <span className="online-badge">Online</span> : <span className="offline-badge">Offline</span>}
                                     </div>
                                 </div>
                             </div>
                             <div className="chat-box">
-                                {filteredMessages.map((msg, index) => {
+                                {(filteredMessages || []).map((msg, index) => {
                                     const currentMsgDateStr = msg.time ? new Date(msg.time).toDateString() : '';
                                     const prevMsgDateStr = index > 0 && filteredMessages[index - 1].time 
                                         ? new Date(filteredMessages[index - 1].time).toDateString() 
